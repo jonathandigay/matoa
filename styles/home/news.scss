@@ -1,0 +1,97 @@
+.news-main {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  .news {
+    .title {
+      display: flex;
+      align-items: center;
+      .line {
+        height: 1px;
+        background: black;
+        max-width: 200px;
+        width: 20%;
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+      margin-bottom: 20px;
+    }
+
+    .news-contents {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas: " text-content img-content";
+      justify-content: center;
+      height: auto;
+
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 25px;
+        grid-area: text-content;
+        p {
+          font-size: 1.3rem;
+        }
+        h1 {
+          font-size: 2.5rem;
+          word-break: keep-all;
+        }
+
+        button {
+          padding: 10px 20px;
+          color: black;
+
+          &:hover {
+            background: black;
+          }
+          &:hover a {
+            color: white;
+          }
+        }
+      }
+      .img-content {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        grid-area: img-content;
+
+        .zigzag {
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translateY(-20%);
+          max-width: 50%;
+        }
+
+        .img {
+          position: relative;
+          width: 70%;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transform: translate(30%, -20%);
+          }
+        }
+      }
+      @media screen and (max-width: 860px) {
+        grid-template-columns: auto;
+        grid-template-areas:
+          "img-content"
+          " text-content ";
+
+        min-height: 400px;
+        .text-content {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

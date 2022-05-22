@@ -1,0 +1,28 @@
+.instagram-main {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  .instagram {
+    .title {
+      margin-bottom: 20px;
+      h1 {
+        font-size: 2rem;
+        font-weight: 200;
+        position: relative;
+        left: 10%;
+        width: max-content;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 80%;
+          height: 1px;
+          bottom: 0;
+          background: black;
+        }
+      }
+    }
+    .instagram-images {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

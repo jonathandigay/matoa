@@ -1,0 +1,54 @@
+.privacybtn-main {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+  padding: 5px 20px;
+  background: gray;
+  animation: fadeUp ease-in 300ms 1;
+
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .privacybtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .hide {
+      right: 0;
+      top: -70%;
+      color: white;
+      cursor: pointer;
+      .material-icons {
+        font-size: 16px;
+      }
+    }
+    button {
+      color: white;
+      border: none;
+      background: none;
+      background: gray;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover a {
+        color: white;
+      }
+      a {
+        cursor: pointer;
+        color: black;
+      }
+    }
+  }
+}
+
+.privactbtn-main-close {
+  transform: translateY(200%);
+  transition: all ease-in-out 300ms;
+}

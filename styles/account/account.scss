@@ -1,0 +1,136 @@
+.my-account {
+  display: flex;
+  padding: 30px 10px;
+  position: relative;
+  @media screen and (max-width: 600px) {
+    padding: 20px 0px;
+  }
+
+  .account-navbar {
+    max-width: 400px;
+    background: black;
+    color: white;
+    z-index: 10;
+    .navbar {
+      position: relative;
+      padding: 20px 20px;
+      height: 100%;
+    }
+    .toogler {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      position: fixed;
+      top: 128px;
+      left: 0;
+      bottom: 0;
+
+      .toogler {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: black;
+        transform: translate(100%, 0);
+        padding: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .dp {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img {
+        width: 150px;
+        height: 150px;
+        position: relative;
+
+        .overlay {
+          position: absolute;
+          background: rgba(0, 0, 0, 0.6);
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          margin: 0 !important;
+        }
+        .preview {
+        }
+      }
+    }
+
+    .upload_progress {
+      text-align: center;
+    }
+    .upload-btn {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+
+      .action {
+        display: flex;
+        .label {
+          background: white;
+
+          cursor: pointer;
+          padding: 5px 10px;
+          color: black;
+          margin: 0 2px;
+        }
+      }
+    }
+
+    .nav {
+      margin: 10px 0;
+      .label {
+        cursor: pointer;
+        h3 {
+          font-weight: 300;
+          font-size: 1rem;
+        }
+      }
+      .nav-lists {
+        .nav-list {
+          padding: 5px 5px;
+          cursor: pointer;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+        }
+        .active {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .navbar-on {
+      transform: translateX(0);
+      transition: all ease-in 300ms;
+    }
+    .navbar-off {
+      transform: translateX(-100%);
+      transition: all ease-in 300ms;
+    }
+  }
+
+  .account-wall {
+    flex: 1;
+  }
+}
+
+@import "./profile.scss";
+@import "./purchase.scss";
+@import "./signout.scss";
+@import "./cancels.scss";

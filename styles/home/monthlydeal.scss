@@ -1,0 +1,97 @@
+.monthlydeal-main {
+  padding: 0 10px;
+  .monthlydeals {
+    margin-bottom: 50px;
+    position: relative;
+    .title {
+      display: flex;
+      align-items: center;
+      .line {
+        height: 1px;
+        background: black;
+        max-width: 200px;
+        width: 20%;
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+      margin-bottom: 20px;
+    }
+
+    .zigzag {
+      // position: absolute;
+      position: absolute;
+      right: 10%;
+      max-width: 200px;
+      transform: translateY(-50%);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+
+      @media screen and (max-width: 868px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+        &:nth-child(even) {
+          padding-top: 40%;
+        }
+        &:nth-child(odd) {
+          padding-bottom: 40%;
+        }
+        .img {
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+        }
+        .name {
+          h3 {
+            font-weight: 500;
+          }
+        }
+        .off {
+          h5 {
+            font-weight: 300;
+          }
+        }
+        .recent-price {
+          p {
+            text-decoration: line-through;
+            font-weight: 300;
+          }
+        }
+        .price {
+          h3 {
+            font-weight: 500;
+          }
+        }
+        .actions {
+          margin: 10px 0;
+          display: flex;
+          justify-content: center;
+
+          button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: none;
+            flex: 1;
+            cursor: pointer;
+            background: black;
+            color: white;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

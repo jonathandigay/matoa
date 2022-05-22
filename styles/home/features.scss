@@ -1,0 +1,40 @@
+.features-main {
+  margin-bottom: 20px;
+  .features {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .feature {
+      padding: 10px 20px 100px;
+      margin: 10px;
+      position: relative;
+      .content {
+        position: relative;
+        z-index: 1;
+        width: 80%;
+        h3 {
+          font-weight: 400;
+          letter-spacing: 1px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-weight: 300;
+        }
+        a {
+          color: black;
+          font-weight: 500;
+        }
+      }
+      .img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 200px;
+        z-index: -1;
+      }
+    }
+  }
+}

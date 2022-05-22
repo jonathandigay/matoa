@@ -1,0 +1,66 @@
+.partners-main {
+  .partners {
+    .partners-carousel {
+      overflow: hidden;
+      background: black;
+      margin: auto;
+      .trucker-top {
+        display: flex;
+        animation: carousel-top linear 15s infinite;
+        width: 200%;
+        @keyframes carousel-top {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .slides {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          .slide {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            img {
+              max-width: 300px;
+            }
+          }
+        }
+      }
+      .trucker-bottom {
+        transform: translateX(50%);
+        display: flex;
+        animation: carousel-bottom linear 15s infinite;
+        width: 200%;
+        @keyframes carousel-bottom {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        .slides {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          .slide {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            img {
+              max-width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

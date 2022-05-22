@@ -1,0 +1,49 @@
+.login-main {
+  padding: 30px 20px;
+  .login {
+    .img {
+      max-width: 300px;
+      margin: auto;
+    }
+    .reminder {
+      text-align: center;
+      padding: 10px 0;
+      p {
+      }
+    }
+    .captcha {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .captchaErr {
+      text-align: center;
+      opacity: 0.8;
+      color: red;
+    }
+    .action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      button {
+        margin: auto;
+        padding: 10px 20px;
+        background: black;
+        color: white;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+    .policy {
+      text-align: center;
+      padding: 10px 0;
+      p {
+      }
+    }
+  }
+}

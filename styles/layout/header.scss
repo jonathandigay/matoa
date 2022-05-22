@@ -1,0 +1,188 @@
+header {
+  display: grid;
+  align-items: center;
+  padding: 5px 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo navigations user";
+  background: white;
+
+  @media screen and (max-width: 778px) {
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "logo logo user"
+      "navigations navigations navigations";
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    grid-area: logo;
+    padding: 10px 0;
+    margin-right: 10px;
+    .img {
+      max-width: 150px;
+    }
+  }
+  .search-form {
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    .back {
+      background: white;
+      padding: 5px 10px;
+      transform: translateX(0);
+      height: 60%;
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover span {
+        transform: translateX(-10px);
+        transition: all ease-in 300ms;
+      }
+      @media screen and (max-width: 778px) {
+        height: 30%;
+      }
+    }
+    .field {
+      height: 60%;
+      width: 70%;
+
+      @media screen and (max-width: 778px) {
+        height: 30%;
+      }
+
+      form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+
+        input {
+          height: 100%;
+          width: 100%;
+          padding: 5px 10px;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .search-form-on {
+    display: flex;
+
+    .field {
+      width: 70%;
+      animation: search ease-in 500ms 1;
+
+      @keyframes search {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 70%;
+        }
+      }
+      form {
+        input {
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 5px 10px;
+      transition: all ease-in 300ms;
+    }
+  }
+
+  // navigations starts
+  .navigations-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: navigations;
+    padding: 10px 0;
+    .navigations {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .navigation {
+        padding: 5px 10px;
+        cursor: pointer;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        font-size: 1.3rem;
+        margin: 0 5px;
+        &:hover {
+          border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+        }
+      }
+      .active {
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  // navigations ends
+
+  .user {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: user;
+    padding: 10px 0;
+
+    button {
+      padding: 5px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    > div {
+      padding: 0 5px;
+    }
+    .authentication {
+      button {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 600px) {
+          .text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.headerOn {
+  transform: translateY(0);
+  transition: all ease-in 200ms;
+}
+.headerOff {
+  transform: translateY(-100%);
+  transition: all ease-in 200ms;
+}

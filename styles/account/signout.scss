@@ -1,0 +1,13 @@
+.signout-main {
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+  .signout {
+    button {
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
