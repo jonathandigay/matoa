@@ -61,17 +61,19 @@ const BuyModal = ({ setBuyItem }: any) => {
             <span className="material-icons-outlined">local_shipping</span>{" "}
             <h4>Delivery Address</h4>
           </div>
-          <div className="info">
-            <div className="contact">
-              {`${currentUser.phone}`}
-              <h3> </h3>
+          {currentUser && (
+            <div className="info">
+              <div className="contact">
+                {`${currentUser.phone}`}
+                <h3> </h3>
+              </div>
+              <div className="address">
+                <h3>
+                  {`${currentUser.barangay},${currentUser.city},,${currentUser.postal}, ${currentUser.country}`}
+                </h3>
+              </div>
             </div>
-            <div className="address">
-              <h3>
-                {`${currentUser.barangay},${currentUser.city},,${currentUser.postal}, ${currentUser.country}`}
-              </h3>
-            </div>
-          </div>
+          )}
 
           <div className="change-address-btn">
             <Link href="/user/account/myaccount/q?nav=profile" passHref>

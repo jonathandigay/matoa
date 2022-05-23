@@ -30,7 +30,7 @@ const nextConfig = {
 
   env: {
     API: "24e3fa79c3d9ef3de668bd674f99bc15",
-    CAPTCHA: "6LeDQQAgAAAAAGuL_82TcLPK4SH060Sc3irl3nm5s",
+    CAPTCHA: "6LeDQQAgAAAAAGuL_82TcLPK4SH060Sc3irl3nm5",
   },
   images: {
     domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],

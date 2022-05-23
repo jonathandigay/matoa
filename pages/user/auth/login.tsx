@@ -26,6 +26,9 @@ const Login = () => {
   if (currentUser) {
     Router.push("/user/account/myaccount/profile");
   }
+  {
+    console.log(process.env.CAPTCHA);
+  }
 
   return (
     <>
