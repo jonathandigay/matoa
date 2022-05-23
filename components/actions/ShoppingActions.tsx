@@ -46,8 +46,8 @@ export const UseShopping = () => {
     }
   };
 
-  const onBuy = ({ img, name, price }: any) => {
-    if (isComplete === false) {
+  const onBuy = ({ img, name, price, currentUser }: any) => {
+    if (isComplete === false || !currentUser) {
       Router.push("/user/account/myaccount/profile");
       return;
     }

@@ -44,6 +44,7 @@ const EyeglassesComp = ({ currentUser }: any) => {
                       img: data.img,
                       name: data.name,
                       price: data.price,
+                      currentUser,
                     })
                   }
                 >

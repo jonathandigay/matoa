@@ -76,6 +76,7 @@ const Hero = ({ currentUser }: any) => {
                                 price: item.price,
                                 name: `${item.nameTop} ${item.nameBottom}`,
                                 img: item.img,
+                                currentUser,
                               })
                             }
                           >
