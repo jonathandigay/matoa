@@ -48,6 +48,7 @@ const Cart = (props: any) => {
                             img: prop.data.img,
                             name: prop.data.name,
                             price: prop.data.price,
+                            currentUser
                           });
                         }}
                       >
